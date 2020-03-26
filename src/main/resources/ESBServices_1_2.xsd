@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File ESB.xsd, application DispatcherESBServices, static library ESBLib--><xsd:schema targetNamespace="urn:esbbank.com/gbo/xml/schemas/v1_0/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:esbbank.com/gbo/xml/schemas/v1_0/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <xsd:include schemaLocation="ESBServices_1.xsd"/>
+  <xsd:element name="esbServiceRequest" type="tns:ESBServiceRequest"/>
+  <xsd:complexType name="ESBServiceRequest">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="1" name="referenceNum" type="tns:ReferenceNum"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="clientChannel" type="tns:ClientChannel"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="serviceName" type="tns:ServiceName"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="UserId" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="Password" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="data" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="esbServiceReply" type="tns:ESBServiceReply"/>
+  <xsd:complexType name="ESBServiceReply">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="1" name="referenceNum" type="tns:ReferenceNum"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="data" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="returnStatus" type="tns:ReturnStatus"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="returnStatusProvider" type="tns:ReturnStatusProvider"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="eaiServiceRequest" type="tns:EAIServiceRequest"/>
+  <xsd:complexType name="EAIServiceRequest">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="1" name="referenceNum" type="tns:ReferenceNum"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="clientChannel" type="tns:ClientChannel"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="serviceName" type="tns:ServiceName"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="UserId" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="Password" type="xsd:string"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="data" type="xsd:anyType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="eaiServiceReply" type="tns:EAIServiceReply"/>
+  <xsd:complexType name="EAIServiceReply">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="1" name="referenceNum" type="tns:ReferenceNum"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="data" type="xsd:anyType"/>
+      <xsd:element maxOccurs="1" minOccurs="1" name="returnStatus" type="tns:ReturnStatus"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="returnStatusProvider" type="tns:ReturnStatusProvider"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

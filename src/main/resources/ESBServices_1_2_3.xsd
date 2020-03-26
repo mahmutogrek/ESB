@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--File DispatcherESBServices_InlineSchema1.xsd, application DispatcherESBServices--><xsd:schema targetNamespace="urn:esbbank.com/gbo/xml/schemas/v1_0/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="urn:esbbank.com/gbo/xml/schemas/v1_0/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <xsd:include schemaLocation="ESBServices_1_2.xsd"/>
+  <xsd:include schemaLocation="ESBServices_1.xsd"/>
+</xsd:schema>
